@@ -20,33 +20,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Manejar el formulario de login
     loginForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita el envío del formulario
-
+        event.preventDefault();
         const username = usernameInput.value.trim();
-
         if (username) {
-            // Cambiar el texto de bienvenida en la navbar
-            navbarText.textContent = `Benvingut ${username}`;
-
-            // Ocultar el botón de login y mostrar logout
-            loginBtn.style.display = "none";
-            logoutBtn.style.display = "inline-block";
-
-            // Cerrar el modal
+            localStorage.setItem("username", username);
+            actualizarNavbar();
             loginModal.hide();
         }
     });
 
     // Manejar el logout
     logoutBtn.addEventListener("click", function () {
-        // Restaurar el texto de la navbar
-        navbarText.textContent = "Comida sobre ruedas";
-
-        // Restaurar los botones
-        loginBtn.style.display = "inline-block";
-        logoutBtn.style.display = "none";
+        localStorage.removeItem("username");
+        actualizarNavbar();
     });
 
-    // Ocultar el botón de logout al inicio
-    logoutBtn.style.display = "none";
+    // Función para actualizar la navbar
+    function actualizarNavbar() {
+        const username = localStorage.getItem("username");
+        if (username) {
+            navbarText.textContent = `Benvingut ${username}`;
+            loginBtn.style.display = "none";
+            logoutBtn.style.display = "inline-block";
+        } else {
+            navbarText.textContent = "Comida sobre ruedas";
+            loginBtn.style.display = "inline-block";
+            logoutBtn.style.display = "none";
+        }
+    }
+
+    // Inicializar la navbar al cargar la página
+    actualizarNavbar();
 });
