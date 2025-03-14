@@ -13,6 +13,17 @@ html {
     border-radius: 8px;
 }
 
+#welcomeMessage {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-40%);
+}
+
+/* Bajar el modal del login */
+#loginModal .modal-dialog {
+    margin-top: 100px;
+    margin-right: 15px;}
+
 .dropdown-submenu {
     position: relative;
 }
@@ -27,17 +38,23 @@ html {
     display: block;
 }
 
-/* Bajar el modal del login */
-#loginModal .modal-dialog {
-    margin-top: 100px; /* Ajusta la cantidad según necesidad */
-    margin-right: 15px;
-}
-
 /* Ajustar tamaño de las imágenes del carrusel */
 .carousel img {
     height: 400px; /* Ajusta según necesidad */
     width: 400px;
     object-fit: cover;
+}
+
+/* Ajustar margen en móvil */
+@media (max-width: 991px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .d-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 .card {
@@ -68,21 +85,11 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 .pagination .page-link {
     color: #000; /* Cambia el color según tu diseño */
 }
 .pagination .page-item.active .page-link {
     background-color: #007bff; /* Color de la página activa */
     border-color: #007bff;
-}
-
-@media (max-width: 991px) {
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .d-flex {
-        flex-direction: column;
-        gap: 10px;
-    }
 }

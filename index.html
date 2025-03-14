@@ -28,16 +28,16 @@
                     Food Truck
                 </a>
 
-                <!-- Botón menú móvil -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <!-- Mensaje centrado -->
+                <div class="mx-auto navbar-text text-white fs-5" id="welcomeMessage">
+                    Comida sobre ruedas
+                </div>
 
                 <!-- Menú -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
                         
-                        <!-- Dropdown Tipus de Menjar -->
+                        <!-- Dropdown Tipos de comida -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="menjarDropdown" role="button" data-bs-toggle="dropdown">
                                 Tipos de comidas
@@ -76,62 +76,29 @@
                                     </ul>
                                 </li>
                             </ul>
-                        </li>                        <!-- Título de la web -->
-                        <li class="nav-item d-none d-lg-block">
-                            <span class="navbar-text text-white fs-5">Comida sobre ruedas</span>
-                        </li>
+                        </li>    
 
                         <!-- Enlace a "Quien somos" -->
                         <li class="nav-item">
-                            <a class="nav-link" href="./quienesSomos.html">
+                            <a class="nav-link" href="./quieneSomos.html">
                                 <i class="bi bi-info-circle"></i> Quien somos
                             </a>
                         </li>
                     </ul>
 
                     <!-- Botones de Login y Logout -->
-                    <div class="d-flex">
-                        <button class="btn btn-outline-light me-2" id="loginBtn" data-bs-toggle="tooltip">
+                    <div class="d-flex ms-3">
+                        <button class="btn btn-outline-light me-2" id="loginBtn">
                             <i class="bi bi-box-arrow-in-right"></i> Login
                         </button>
-                        <button class="btn btn-outline-danger" id="logoutBtn" data-bs-toggle="tooltip">
+                        <button class="btn btn-outline-danger d-none" id="logoutBtn">
                             <i class="bi bi-box-arrow-right"></i> Logout
                         </button>
                     </div>
                 </div>
             </div>
         </nav>
-
-        <!-- MODAL LOGIN -->
-        <div id="loginModal" class="modal fade" tabindex="-1">
-            <div class="modal-dialog modal-dialog-end"> 
-                <div class="modal-content">
-                    <div class="modal-header bg-dark text-white">
-                        <h5 class="modal-title">Iniciar Sesión</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="loginForm">
-                            <div class="mb-3">
-                                <label for="username" class="form-label">Nombre de usuario</label>
-                                <input type="text" class="form-control" id="username" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="password" required>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary me-2">Enviar</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </header>
-
     <!-- BODY/MAIN -->
     <main class="container my-5">
         <h2>Benvenido a la Food Truck!</h2>
@@ -182,6 +149,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Repite para más cards -->
             <div class="col-md-3">
                 <div class="card">
                     <img src="./img/Hamburguesa.jpg" class="card-img-top" alt="Producto 1">
@@ -220,10 +188,9 @@
         <!-- Paginación -->
         <nav aria-label="Page navigation example" class="mt-4">
             <ul class="pagination justify-content-center">
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <!-- Añade más páginas según sea necesario -->
+                <li class="page-item"><a class="page-link" href="">1</a></li>
+                <li class="page-item"><a class="page-link" href="">2</a></li>
+                <li class="page-item"><a class="page-link" href="">3</a></li>
             </ul>
         </nav>
 
@@ -237,7 +204,7 @@
             <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
             <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
         </div>
-        
+
         <!-- Alerta de cookies -->
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
             Este sitio web utiliza cookies para mejorar la experiencia del usuario.
@@ -245,5 +212,31 @@
         </div>
     </footer>
 
+
+    <!-- Modal de Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Nombre de usuario</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
