@@ -85,7 +85,6 @@ Treballar amb els components de **Bootstrap 5** per donar una estructura gràfic
 
 ## 👥 Integrants
 - Alex Ventura
-- Marc Colome
 - Sergi Masip
 
 🎉 **Bon desenvolupament i molta sort! 🚀**
