@@ -18,18 +18,52 @@
                     <img src="../img/logo.jpg" height="50px" width="auto" alt="Food Truck Logo">
                     Food Truck
                 </a>
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav ms-auto">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="menjarDropdown" role="button" data-bs-toggle="dropdown">
                                 Tipos de comidas
                             </a>
                             <ul class="dropdown-menu">
-                                <!-- Submenús -->
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Frio</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./BocataJamon.html">Bocadillo de jamón ibérico</a></li>
+                                        <li><a class="dropdown-item" href="./BocataFuet.html">Bocadillo de fuet</a></li>
+                                        <li><a class="dropdown-item" href="./BocataQueso.html">Bocadillo de queso</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Caliente</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./Burguer.html">Burguer</a></li>
+                                        <li><a class="dropdown-item" href="./Franckfurt.html">Frankfurt</a></li>
+                                        <li><a class="dropdown-item" href="./Pizza.html">Pizza</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Dulce</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./Helado.html">Helado</a></li>
+                                        <li><a class="dropdown-item" href="./Creppe.html">Creppe</a></li>
+                                        <li><a class="dropdown-item" href="./Bolleria.html">Bolleria</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Bebidas</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./Agua.html">Agua</a></li>
+                                        <li><a class="dropdown-item" href="./Cerveza.html">Cerveza</a></li>
+                                        <li><a class="dropdown-item" href="./Cocacola.html">Coca-Cola</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <span class="navbar-text text-white"></span>
+                        <li class="nav-item d-none d-lg-block">
+                            <span class="navbar-text text-white fs-5">Comida sobre ruedas</span>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../quieneSomos.html">
@@ -37,9 +71,11 @@
                             </a>
                         </li>
                     </ul>
-                    <button class="btn btn-outline-danger ms-3" id="logoutBtn" data-bs-toggle="tooltip" title="Cerrar sesión">
-                        <i class="bi bi-box-arrow-right"></i> Logout
-                    </button>
+                    <div class="d-flex">
+                        <button class="btn btn-outline-danger" id="logoutBtn" data-bs-toggle="tooltip" title="Cerrar sesión">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -68,5 +104,9 @@
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 Food Truck - Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+
 </body>
 </html>

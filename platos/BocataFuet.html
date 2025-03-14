@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="../script.js"></script>
     <title>Bocadillo de Fuet</title>
 </head>
 <body>
@@ -17,26 +18,92 @@
                     <img src="../img/logo.jpg" height="50px" width="auto" alt="Food Truck Logo">
                     Food Truck
                 </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="menjarDropdown" role="button" data-bs-toggle="dropdown">
+                                Tipos de comidas
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Frio</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./BocataJamon.html">Bocadillo de jamón ibérico</a></li>
+                                        <li><a class="dropdown-item" href="./BocataFuet.html">Bocadillo de fuet</a></li>
+                                        <li><a class="dropdown-item" href="./BocataQueso.html">Bocadillo de queso</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Caliente</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./Burguer.html">Burguer</a></li>
+                                        <li><a class="dropdown-item" href="./Franckfurt.html">Frankfurt</a></li>
+                                        <li><a class="dropdown-item" href="./Pizza.html">Pizza</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Dulce</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./Helado.html">Helado</a></li>
+                                        <li><a class="dropdown-item" href="./Creppe.html">Creppe</a></li>
+                                        <li><a class="dropdown-item" href="./Bolleria.html">Bolleria</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Bebidas</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="./Agua.html">Agua</a></li>
+                                        <li><a class="dropdown-item" href="./Cerveza.html">Cerveza</a></li>
+                                        <li><a class="dropdown-item" href="./Cocacola.html">Coca-Cola</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../quieneSomos.html">
+                                <i class="bi bi-info-circle"></i> Quien somos
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="d-flex">
+                        <span class="navbar-text text-white fs-5"></span>
+                        <button class="btn btn-outline-danger ms-3" id="logoutBtn" data-bs-toggle="tooltip" title="Cerrar sesión">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </button>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
 
     <!-- BODY/MAIN -->
     <main class="container my-5">
-        <h2>Bocadillo de Fuet</h2>
-        <img src="../img/img-html/BocataFuet.jpg" class="img-fluid" alt="Bocadillo de Fuet" style="width: 40%;">
-        <p>Un bocadillo clásico con fuet, ideal para un almuerzo rápido y sabroso.</p>
-        <ul>
-            <li>Ingredientes: Fuet, pan rústico, aceite de oliva.</li>
-            <li>Precio: 4€</li>
-            <li>Origen: Cataluña</li>
-        </ul>
-        <i class="fas fa-euro-sign"></i> <i class="fas fa-star text-warning"></i>
+        <div class="text-center">
+            <h2>Bocadillo de Fuet</h2>
+            <img src="../img/img-html/BocataFuet.jpg" class="img-fluid rounded" alt="Bocadillo de Fuet" style="width: 40%;">
+        </div>
+        <div class="mt-4">
+            <p class="lead">Disfruta de un delicioso bocadillo de fuet, ideal para un almuerzo rápido y sabroso.</p>
+            <ul class="list-unstyled">
+                <li><strong>Ingredientes:</strong> Fuet, pan rústico, aceite de oliva.</li>
+                <li><strong>Precio:</strong> 4€</li>
+                <li><strong>Origen:</strong> Cataluña</li>
+            </ul>
+            <div class="mt-3">
+                <i class="fas fa-euro-sign"></i> <i class="fas fa-star text-warning"></i>
+            </div>
+        </div>
     </main>
 
     <!-- FOOTER -->
     <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 Food Truck - Todos los derechos reservados.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

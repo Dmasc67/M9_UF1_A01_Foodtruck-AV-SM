@@ -39,9 +39,9 @@ document.addEventListener("DOMContentLoaded", function () {
     function actualizarNavbar() {
         const username = localStorage.getItem("username");
         if (username) {
-            navbarText.textContent = `Benvingut ${username}`;
+            navbarText.textContent = `Bienvenido, ${username}`;
             loginBtn.style.display = "none";
-            logoutBtn.style.display = "inline-block";
+            logoutBtn.style.display = "block";
         } else {
             navbarText.textContent = "Comida sobre ruedas";
             loginBtn.style.display = "inline-block";
