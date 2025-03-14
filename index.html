@@ -91,10 +91,10 @@
 
                     <!-- Botones de Login y Logout -->
                     <div class="d-flex">
-                        <button class="btn btn-outline-light me-2" id="loginBtn">
+                        <button class="btn btn-outline-light me-2" id="loginBtn" data-bs-toggle="tooltip" title="Iniciar sesión">
                             <i class="bi bi-box-arrow-in-right"></i> Login
                         </button>
-                        <button class="btn btn-outline-danger" id="logoutBtn">
+                        <button class="btn btn-outline-danger" id="logoutBtn" data-bs-toggle="tooltip" title="Cerrar sesión">
                             <i class="bi bi-box-arrow-right"></i> Logout
                         </button>
                     </div>
@@ -217,6 +217,16 @@
                 </div>
             </div>
         </div>
+
+        <!-- Paginación -->
+        <nav aria-label="Page navigation example" class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <!-- Añade más páginas según sea necesario -->
+            </ul>
+        </nav>
 
     </main>
 

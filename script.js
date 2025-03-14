@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const usernameInput = document.getElementById("username");
     const navbarText = document.querySelector(".navbar-text");
 
+    // Inicializar tooltips
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
     // Mostrar el modal al hacer clic en el botón de login
     loginBtn.addEventListener("click", function () {
         loginModal.show();
