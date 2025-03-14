@@ -1,25 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
     <link rel="stylesheet" href="./styles.css">
     <script src="./script.js"></script>
+
     <title>Food Truck</title>
 </head>
 <body>
+
+    <!-- HEADER -->
     <header>
-        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                
+                <!-- Logo -->
+                <a class="navbar-brand" href="">
+                    <img src="./img/logo.jpg" height="50px" width="auto" alt="Food Truck Logo">
+                    Food Truck
+                </a>
+
+                <!-- Botón menú móvil -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        
+                        <!-- Dropdown Tipus de Menjar -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="menjarDropdown" role="button" data-bs-toggle="dropdown">
+                                Tipos de comidas
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Frio</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Bocadillo de Jamón ibérico</a></li>
+                                        <li><a class="dropdown-item" href="#">Bocadillo de fuet</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Caliente</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Burguer</a></li>
+                                        <li><a class="dropdown-item" href="#">Frankfurt</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Dulce</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Helado</a></li>
+                                        <li><a class="dropdown-item" href="#">Creppe</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Bebidas</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Agua</a></li>
+                                        <li><a class="dropdown-item" href="#">Cerveza</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>                        <!-- Título de la web -->
+                        <li class="nav-item d-none d-lg-block">
+                            <span class="navbar-text text-white fs-5">Comida sobre ruedas</span>
+                        </li>
+
+                        <!-- Enlace a "Quien somos" -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#quien-somos">
+                                <i class="bi bi-info-circle"></i> Quien somos
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Botones de Login y Logout -->
+                    <div class="d-flex">
+                        <button class="btn btn-outline-light me-2" id="loginBtn">
+                            <i class="bi bi-box-arrow-in-right"></i> Login
+                        </button>
+                        <button class="btn btn-outline-danger" id="logoutBtn">
+                            <i class="bi bi-box-arrow-right"></i> Logout
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main>
+    <!-- BODY/MAIN -->
+    <main class="container my-5">
+        <h2>Benvenido a la Food Truck!</h2>
+        <p>Disfruta de la mejor comida sobre ruedas.</p>
 
+        <!-- CARRUSEL -->
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="5000">
+                    <img src="./img/img1.jpg" class="d-block w-100" alt="Comida 1">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./img/img2.jpg" class="d-block w-100" alt="Comida 2">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./img/img3.jpg" class="d-block w-100" alt="Comida 3">
+                </div>
+                <div class="carousel-item" data-bs-interval="5000">
+                    <img src="./img/img4.jpg" class="d-block w-100" alt="Comida 4">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <!-- BREADCRUMB (MIGAS DE PAN) -->
+        <nav aria-label="breadcrumb" class="mt-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Food Truck</li>
+            </ol>
+        </nav>
+
+        <!-- SECCIÓN QUI SOM -->
+        <section id="qui-som" class="mt-5">
+            <h2>Quien somos</h2>
+            <p>Somos un equipo apassionado en la buena comida y llevamos al mejor street food de tu ciudad.</p>
+        </section>
     </main>
 
-    <footer>
-
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Food Truck - Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
