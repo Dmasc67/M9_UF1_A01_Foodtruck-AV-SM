@@ -14,37 +14,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Mostrar el modal al hacer clic en el botón de login
-    loginBtn.addEventListener("click", function () {
-        loginModal.show();
-    });
+    if (loginBtn) {
+        loginBtn.addEventListener("click", function () {
+            loginModal.show();
+        });
+    }
 
     // Manejar el formulario de login
-    loginForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const username = usernameInput.value.trim();
-        if (username) {
-            localStorage.setItem("username", username);
-            actualizarNavbar();
-            loginModal.hide();
-        }
-    });
+    if (loginForm) {
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const username = usernameInput.value.trim();
+            if (username) {
+                localStorage.setItem("username", username);
+                actualizarNavbar();
+                loginModal.hide();
+            }
+        });
+    }
 
     // Manejar el logout
-    logoutBtn.addEventListener("click", function () {
-        localStorage.removeItem("username");
-        actualizarNavbar();
-    });
+    if (logoutBtn) {
+        logoutBtn.addEventListener("click", function () {
+            localStorage.removeItem("username");
+            actualizarNavbar();
+            window.location.href = '/DAW/M09/UF1/M9_UF1_A01_Foodtruck-AV-MC-SM/index.html';
+        });
+    }
 
     // Función para actualizar la navbar
     function actualizarNavbar() {
         const username = localStorage.getItem("username");
         if (username) {
             navbarText.textContent = `Bienvenido, ${username}`;
-            loginBtn.style.display = "none";
+            if (loginBtn) loginBtn.style.display = "none";
             logoutBtn.style.display = "block";
         } else {
             navbarText.textContent = "Comida sobre ruedas";
-            loginBtn.style.display = "inline-block";
+            if (loginBtn) loginBtn.style.display = "inline-block";
             logoutBtn.style.display = "none";
         }
     }
