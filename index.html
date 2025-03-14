@@ -46,33 +46,33 @@
                                 <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle" href="#">Frio</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Bocadillo de jamón ibérico</a></li>
-                                        <li><a class="dropdown-item" href="#">Bocadillo de fuet</a></li>
-                                        <li><a class="dropdown-item" href="#">Bocadillo de queso</a></li>
+                                        <li><a class="dropdown-item" href="./platos/BocataJamon.html">Bocadillo de jamón ibérico</a></li>
+                                        <li><a class="dropdown-item" href="./platos/BocataFuet.html">Bocadillo de fuet</a></li>
+                                        <li><a class="dropdown-item" href="./platos/BocataQueso.html">Bocadillo de queso</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle" href="#">Caliente</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Burguer</a></li>
-                                        <li><a class="dropdown-item" href="#">Frankfurt</a></li>
-                                        <li><a class="dropdown-item" href="#">Pizza</a></li>
+                                        <li><a class="dropdown-item" href="./platos/Burguer.html">Burguer</a></li>
+                                        <li><a class="dropdown-item" href="./platos/Franckfurt.html">Frankfurt</a></li>
+                                        <li><a class="dropdown-item" href="./platos/Pizza.html">Pizza</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle" href="#">Dulce</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Helado</a></li>
-                                        <li><a class="dropdown-item" href="#">Creppe</a></li>
-                                        <li><a class="dropdown-item" href="#">Bolleria</a></li>
+                                        <li><a class="dropdown-item" href="./platos/Helado.html">Helado</a></li>
+                                        <li><a class="dropdown-item" href="./platos/Creppe.html">Creppe</a></li>
+                                        <li><a class="dropdown-item" href="./platos/Bolleria.html">Bolleria</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle" href="#">Bebidas</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Agua</a></li>
-                                        <li><a class="dropdown-item" href="#">Cerveza</a></li>
-                                        <li><a class="dropdown-item" href="#">Coca-Cola</a></li>
+                                        <li><a class="dropdown-item" href="./platos/Agua.html">Agua</a></li>
+                                        <li><a class="dropdown-item" href="./platos/Cerveza.html">Cerveza</a></li>
+                                        <li><a class="dropdown-item" href="./platos/Cocacola.html">Coca-Cola</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -91,10 +91,10 @@
 
                     <!-- Botones de Login y Logout -->
                     <div class="d-flex">
-                        <button class="btn btn-outline-light me-2" id="loginBtn">
+                        <button class="btn btn-outline-light me-2" id="loginBtn" data-bs-toggle="tooltip">
                             <i class="bi bi-box-arrow-in-right"></i> Login
                         </button>
-                        <button class="btn btn-outline-danger" id="logoutBtn">
+                        <button class="btn btn-outline-danger" id="logoutBtn" data-bs-toggle="tooltip">
                             <i class="bi bi-box-arrow-right"></i> Logout
                         </button>
                     </div>
@@ -216,6 +216,16 @@
                 </div>
             </div>
         </div>
+
+        <!-- Paginación -->
+        <nav aria-label="Page navigation example" class="mt-4">
+            <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <!-- Añade más páginas según sea necesario -->
+            </ul>
+        </nav>
 
     </main>
 

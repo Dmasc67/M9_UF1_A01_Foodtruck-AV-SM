@@ -68,8 +68,14 @@ footer {
     bottom: 0;
     width: 100%;
 }
+.pagination .page-link {
+    color: #000; /* Cambia el color según tu diseño */
+}
+.pagination .page-item.active .page-link {
+    background-color: #007bff; /* Color de la página activa */
+    border-color: #007bff;
+}
 
-/* Ajustar margen en móvil */
 @media (max-width: 991px) {
     .navbar-nav {
         text-align: center;
