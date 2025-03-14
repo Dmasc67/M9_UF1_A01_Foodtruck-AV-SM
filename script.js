@@ -7,7 +7,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const usernameInput = document.getElementById("username");
     const navbarText = document.querySelector(".navbar-text");
 
-    // Mostrar el modal al hacer clic en el botón de login
+    // Función para actualizar la interfaz basada en el estado de sesión
+    function actualizarEstadoSesion() {
+        const usuarioGuardado = localStorage.getItem("usuario");
+
+        if (usuarioGuardado) {
+            navbarText.textContent = `Benvenido ${usuarioGuardado}`;
+            loginBtn.style.display = "none";
+            logoutBtn.style.display = "inline-block";
+        } else {
+            navbarText.textContent = "Comida sobre ruedas";
+            loginBtn.style.display = "inline-block";
+            logoutBtn.style.display = "none";
+        }
+    }
+
+    // Verificar si hay un usuario guardado al cargar la página
+    actualizarEstadoSesion();
+
+    // Mostrar el modal de login al hacer clic en el botón de login
     loginBtn.addEventListener("click", function () {
         loginModal.show();
     });
@@ -19,28 +37,15 @@ document.addEventListener("DOMContentLoaded", function () {
         const username = usernameInput.value.trim();
 
         if (username) {
-            // Cambiar el texto de bienvenida en la navbar
-            navbarText.textContent = `Benvingut ${username}`;
-
-            // Ocultar el botón de login y mostrar logout
-            loginBtn.style.display = "none";
-            logoutBtn.style.display = "inline-block";
-
-            // Cerrar el modal
-            loginModal.hide();
+            localStorage.setItem("usuario", username); // Guardar el usuario en localStorage
+            actualizarEstadoSesion(); // Actualizar la interfaz
+            loginModal.hide(); // Cerrar el modal
         }
     });
 
     // Manejar el logout
     logoutBtn.addEventListener("click", function () {
-        // Restaurar el texto de la navbar
-        navbarText.textContent = "Comida sobre ruedas";
-
-        // Restaurar los botones
-        loginBtn.style.display = "inline-block";
-        logoutBtn.style.display = "none";
+        localStorage.removeItem("usuario"); // Eliminar usuario guardado
+        actualizarEstadoSesion(); // Restaurar la interfaz
     });
-
-    // Ocultar el botón de logout al inicio
-    logoutBtn.style.display = "none";
 });
