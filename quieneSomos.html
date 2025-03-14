@@ -13,7 +13,7 @@
     <script src="./script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <title>Food Truck</title>
+    <title>Quiénes Somos - Food Truck</title>
 </head>
 <body>
 
@@ -23,7 +23,7 @@
             <div class="container">
                 
                 <!-- Logo -->
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="index.html">
                     <img src="./img/logo.jpg" height="50px" width="auto" alt="Food Truck Logo">
                     Food Truck
                 </a>
@@ -36,7 +36,6 @@
                 <!-- Menú -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
-                        
                         <!-- Dropdown Tipus de Menjar -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="menjarDropdown" role="button" data-bs-toggle="dropdown">
@@ -46,9 +45,8 @@
                                 <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle" href="#">Frio</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Bocadillo de jamón ibérico</a></li>
+                                        <li><a class="dropdown-item" href="#">Bocadillo de Jamón ibérico</a></li>
                                         <li><a class="dropdown-item" href="#">Bocadillo de fuet</a></li>
-                                        <li><a class="dropdown-item" href="#">Bocadillo de queso</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
@@ -56,7 +54,6 @@
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Burguer</a></li>
                                         <li><a class="dropdown-item" href="#">Frankfurt</a></li>
-                                        <li><a class="dropdown-item" href="#">Pizza</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
@@ -64,7 +61,6 @@
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Helado</a></li>
                                         <li><a class="dropdown-item" href="#">Creppe</a></li>
-                                        <li><a class="dropdown-item" href="#">Bolleria</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
@@ -72,18 +68,18 @@
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Agua</a></li>
                                         <li><a class="dropdown-item" href="#">Cerveza</a></li>
-                                        <li><a class="dropdown-item" href="#">Coca-Cola</a></li>
                                     </ul>
                                 </li>
                             </ul>
-                        </li>                        <!-- Título de la web -->
+                        </li>
+                        <!-- Título de la web -->
                         <li class="nav-item d-none d-lg-block">
                             <span class="navbar-text text-white fs-5">Comida sobre ruedas</span>
                         </li>
 
                         <!-- Enlace a "Quien somos" -->
                         <li class="nav-item">
-                            <a class="nav-link" href="./quieneSomos.html">
+                            <a class="nav-link" href="#quien-somos">
                                 <i class="bi bi-info-circle"></i> Quien somos
                             </a>
                         </li>
@@ -101,123 +97,16 @@
                 </div>
             </div>
         </nav>
-
-        <!-- MODAL LOGIN -->
-        <div id="loginModal" class="modal fade" tabindex="-1">
-            <div class="modal-dialog modal-dialog-end"> 
-                <div class="modal-content">
-                    <div class="modal-header bg-dark text-white">
-                        <h5 class="modal-title">Iniciar Sesión</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form id="loginForm">
-                            <div class="mb-3">
-                                <label for="username" class="form-label">Nombre de usuario</label>
-                                <input type="text" class="form-control" id="username" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="password" class="form-label">Contraseña</label>
-                                <input type="password" class="form-control" id="password" required>
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <button type="submit" class="btn btn-primary me-2">Enviar</button>
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </header>
 
     <!-- BODY/MAIN -->
     <main class="container my-5">
-        <h2>Benvenido a la Food Truck!</h2>
-        <p>Disfruta de la mejor comida sobre ruedas.</p>
-
-        <!-- CARRUSEL -->
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="5000">
-                    <img src="./img/img1.jpg" class="d-block w-100" alt="Comida 1">
-                </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="./img/img2.jpg" class="d-block w-100" alt="Comida 2">
-                </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="./img/img3.jpg" class="d-block w-100" alt="Comida 3">
-                </div>
-                <div class="carousel-item" data-bs-interval="5000">
-                    <img src="./img/img4.jpg" class="d-block w-100" alt="Comida 4">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>
-        </div>
-
-        <!-- BREADCRUMB (MIGAS DE PAN) -->
-        <nav aria-label="breadcrumb" class="mt-3">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Food Truck</li>
-            </ol>
-        </nav>
-
-        <!-- Cards de productos destacados -->
-        <div class="row mt-4">
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="./img/product1.jpg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <i class="fas fa-thumbs-up text-success"></i>
-                        <i class="fas fa-thumbs-down text-danger"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- Repite para más cards -->
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="./img/product1.jpg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <i class="fas fa-thumbs-up text-success"></i>
-                        <i class="fas fa-thumbs-down text-danger"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="./img/product1.jpg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <i class="fas fa-thumbs-up text-success"></i>
-                        <i class="fas fa-thumbs-down text-danger"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="card">
-                    <img src="./img/product1.jpg" class="card-img-top" alt="Producto 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Producto 1</h5>
-                        <p class="card-text">Descripción breve del producto.</p>
-                        <i class="fas fa-thumbs-up text-success"></i>
-                        <i class="fas fa-thumbs-down text-danger"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        <h2>Quiénes Somos</h2>
+        <p>En el corazón de la ciudad, nació una idea revolucionaria: llevar la mejor comida a las calles, donde la gente realmente la necesita. Así nació Food Truck, un sueño hecho realidad por dos panas apasionados por la gastronomía y la aventura.</p>
+        <p>Nuestra historia comenzó en un pequeño garaje, donde transformamos una vieja furgoneta en un moderno food truck. Con mucho esfuerzo y dedicación, logramos crear un menú que combina lo mejor de la cocina tradicional con un toque moderno y fresco.</p>
+        <p>Ubicación: Nos puedes encontrar en los eventos más importantes de la ciudad, desde festivales de música hasta ferias gastronómicas. Siempre estamos en movimiento, llevando nuestra deliciosa comida a donde más se necesita.</p>
+        <p>Contacto: Para más información, contáctanos a través de nuestro correo electrónico info@foodtruck.com o síguenos en nuestras redes sociales para conocer nuestra ubicación diaria.</p>
+        <p>En Food Truck, creemos que la comida es más que solo alimento; es una experiencia que debe compartirse y disfrutarse. Únete a nosotros en este viaje culinario y descubre por qué somos la mejor opción para disfrutar de la comida sobre ruedas.</p>
     </main>
 
     <!-- FOOTER -->

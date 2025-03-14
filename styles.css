@@ -45,3 +45,32 @@ html {
         gap: 10px;
     }
 }
+
+.card {
+    margin-bottom: 20px;
+}
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Asegurar que el footer esté al final de la página */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
