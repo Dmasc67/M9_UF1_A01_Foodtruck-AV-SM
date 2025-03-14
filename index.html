@@ -45,8 +45,9 @@
                                 <li class="dropdown-submenu">
                                     <a class="dropdown-item dropdown-toggle" href="#">Frio</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Bocadillo de Jamón ibérico</a></li>
+                                        <li><a class="dropdown-item" href="#">Bocadillo de jamón ibérico</a></li>
                                         <li><a class="dropdown-item" href="#">Bocadillo de fuet</a></li>
+                                        <li><a class="dropdown-item" href="#">Bocadillo de queso</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
@@ -54,6 +55,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Burguer</a></li>
                                         <li><a class="dropdown-item" href="#">Frankfurt</a></li>
+                                        <li><a class="dropdown-item" href="#">Pizza</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
@@ -61,6 +63,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Helado</a></li>
                                         <li><a class="dropdown-item" href="#">Creppe</a></li>
+                                        <li><a class="dropdown-item" href="#">Bolleria</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
@@ -68,6 +71,7 @@
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Agua</a></li>
                                         <li><a class="dropdown-item" href="#">Cerveza</a></li>
+                                        <li><a class="dropdown-item" href="#">Coca-Cola</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -96,6 +100,35 @@
                 </div>
             </div>
         </nav>
+
+        <!-- MODAL LOGIN -->
+        <div id="loginModal" class="modal fade" tabindex="-1">
+            <div class="modal-dialog modal-dialog-end"> 
+                <div class="modal-content">
+                    <div class="modal-header bg-dark text-white">
+                        <h5 class="modal-title">Iniciar Sesión</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Nombre de usuario</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="password" required>
+                            </div>
+                            <div class="d-flex justify-content-end">
+                                <button type="submit" class="btn btn-primary me-2">Enviar</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </header>
 
     <!-- BODY/MAIN -->
@@ -135,11 +168,6 @@
             </ol>
         </nav>
 
-        <!-- SECCIÓN QUI SOM -->
-        <section id="qui-som" class="mt-5">
-            <h2>Quien somos</h2>
-            <p>Somos un equipo apassionado en la buena comida y llevamos al mejor street food de tu ciudad.</p>
-        </section>
     </main>
 
     <!-- FOOTER -->
