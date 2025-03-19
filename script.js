@@ -38,7 +38,14 @@ document.addEventListener("DOMContentLoaded", function () {
         logoutBtn.addEventListener("click", function () {
             localStorage.removeItem("username");
             actualizarNavbar();
-            window.location.href = './index.html';
+            
+            // Detectar si estamos en una subcarpeta (ej. /platos/)
+            const isPlatosPage = window.location.pathname.includes("/platos/");
+            if (isPlatosPage) {
+                window.location.href = "../index.html"; // Salimos de /platos/ a la raíz
+            } else {
+                window.location.href = "index.html"; // Si estamos en la raíz, redirige normal
+            }
         });
     }
 
